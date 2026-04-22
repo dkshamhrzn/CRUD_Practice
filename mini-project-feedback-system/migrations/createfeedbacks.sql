@@ -1,0 +1,1 @@
+CREATE TABLE user_feedback (id INT AUTO_INCREMENT PRIMARY KEY, user_id INT, feedback_text TEXT NOT NULL, submitted_at DATETIME DEFAULT CURRENT_TIMESTAMP, status ENUM('open', 'resolved', 'ignored') DEFAULT 'open', resolved_at DATETIME, admin_comment TEXT, FOREIGN KEY (user_id) REFERENCES users(id) );
